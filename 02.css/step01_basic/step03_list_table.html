@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.dept {
+            list-style-type: none;
+        }
+        table, tr, th, td {
+            border-collapse: collapse;
+            border: solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- * 곱하기 --> 
+    <!-- > 하위에 속한 것들 -->
+    <!-- () 묶어서 표현 가능 -->
+    <!-- + -->
+     <!-- ., # class, id -->
+    <!-- ul.cmopany>(li.dept{dept$}*5) -->
+    <ul class="company">
+        <li class="dept">dept1</li>
+        <li class="dept">dept2</li>
+        <li class="dept">dept3</li>
+        <li class="dept">dept4</li>
+        <li class="dept">dept5</li>
+    </ul>
+
+    <!-- table>(tr>th{제목$}*2)+(tr>td{데이터$}*2) -->
+    <table>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+        </tr>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
