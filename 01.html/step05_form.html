@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">
+        <label for="user-name">유저이름</label>
+        <input type="text" name="uname" id="user-name" placeholder="이름을 입력하세요">
+        <button type="submit">버튼</button>
+    </form>
+
+    <button type="button" aria-label="창닫기">X</button>
+
+    <hr>
+
+    <select name="car" id="">
+        <option value="" selected disabled>차종선택</option>
+        <optgroup label="독일브랜드">
+            <option value="audi">아우디</option>
+        </optgroup>
+        <optgroup label="스웨덴브랜드">
+            <option value="volvo">볼보</option>
+        </optgroup>    
+    </select>
+
+    <hr>
+
+    <label for="feedback">의견 남겨주세요</label>
+    <textarea 
+        name="feedback" 
+        id="feedback"
+        placeholder="의견 남겨주세요"
+        rows="5"
+        cols="40"
+        maxlength="100">
+    </textarea>
+
+    <hr>
+    <form action="" method="post">
+        ID : <input type="text" name="uid" id="uid">
+        PW : <input type="password" name="uid" id="uid">
+    </form>
+
+    <hr>
+    <form action="" method="post">
+        <input type="radio" name="favorite-animal" id="" value="dog">강아지
+        <input type="radio" name="favorite-animal" id="" value="cat">고양이
+    </form>
+    <form action="" method="post">
+        <input type="checkbox" name="favorite-animal" id="" value="dog">강아지
+        <input type="checkbox" name="favorite-animal" id="" value="cat">고양이
+    </form>
+
+    <hr>
+    <h1>네이버 검색 서버</h1>
+    <form action="https://search.naver.com/search.naver" method="get">
+        <input type="text" name="query" id="">
+        <input type="submit" value="검색">
+    </form>
+    
+    <hr>
+    <h1>구글 검색 서버</h1>
+    <img src="https://i.namu.wiki/i/nLVET95Ot1jvbh0MhlJ622Dc5ju2325M8bi3-cUPxgSna8-kJYblfr9QXpLge4fP0lLJEa9_Xw7yiNvJTD76RrPVY2eBoubuyBMQk9Whm-I0HBPfLh6cK2x0G8h2ruM5MgbbXrC5rTwgkJCdL9H0Dg.svg"
+        alt="구글"
+        height="50px"
+        width="180px">
+    <form action="https://www.google.com/search" method="get">
+        <input type="text" name="q" id="">
+        <input type="submit" value="검색">
+    </form>
+
+    <hr>
+    <h1>고객 만족도 설문조사</h1>
+    <form action="" method="post">
+        <div style="margin-bottom: 20px;">
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="이름을 입력하세요">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="age">나이</label>
+            <input type="number" name="age" id="age" placeholder="나이를 입력하세요">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="path">방문 경로</label><br>
+            <input type="radio" name="path" id="search" value="search">검색 엔진<br>
+            <input type="radio" name="path" id="ad" value="ad">광고<br>
+            <input type="radio" name="path" id="recom" value="recom">지인 추천
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="interest">관심 주제(복수 선택 가능)</label><br>
+            <input type="checkbox" name="interest[]" id="technique" value="technique">기술<br>
+            <input type="checkbox" name="interest[]" id="design" value="design">디자인<br>
+            <input type="checkbox" name="interest[]" id="marketing" value="marketing">마케팅
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="frequency">방문 빈도</label>
+            <select name="frequency" id="">
+            <option value="" selected disabled>선택하세요</option>
+            <option value="once">주 1회</option>
+            <option value="three">주 3회</option>   
+            </select>
+        </div>
+        <div style="margin-bottom: 20px;">
+        <label for="feedback">추가 의견</label><br>
+        <textarea 
+        placeholder="개선 사항이나 의견을 자유롭게 작성해주세요"
+        rows="5"
+        cols="40"
+        maxlength="100"></textarea>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <button type="submit">제출하기</button>
+        </div>
+    </form>
+
+    
+    
+
+</body>
+</html>
