@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hi-Fi Shop &amp; Service</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a56ff",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                        "gray-bg-light": "#f1f5f9",
+                        "gray-bg-dark": "#334155",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <header class="flex justify-between items-center mb-12">
+            <button
+                class="w-12 h-12 flex items-center justify-center rounded-2xl bg-white dark:bg-card-dark shadow-sm border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform">
+                <span class="material-icons-outlined text-slate-600 dark:text-slate-300">chevron_left</span>
+            </button>
+            <div class="flex gap-4">
+                <button
+                    class="w-12 h-12 flex items-center justify-center rounded-2xl bg-white dark:bg-card-dark shadow-sm border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform">
+                    <span class="material-icons-outlined text-slate-600 dark:text-slate-300">search</span>
+                </button>
+                <button
+                    class="w-12 h-12 flex items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-blue-500/20 hover:scale-105 transition-transform">
+                    <span class="material-icons-outlined">shopping_bag</span>
+                </button>
+            </div>
+        </header>
+        <section class="mb-16">
+            <h1 class="text-5xl font-bold mb-4 tracking-tight">Hi-Fi Shop &amp; Service</h1>
+            <p class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl leading-relaxed">
+                Audio shop on Rustaveli Ave 57. <br />
+                This shop offers both products and services for premium audio experiences.
+            </p>
+        </section>
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex-1">
+                <div class="flex justify-between items-end mb-8">
+                    <div class="flex items-baseline gap-2">
+                        <h2 class="text-2xl font-bold">Products</h2>
+                        <span class="text-slate-400 text-lg">41</span>
+                    </div>
+                    <a class="text-primary font-semibold hover:underline" href="#">Show all</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="group cursor-pointer">
+                        <div
+                            class="bg-gray-bg-light dark:bg-gray-bg-dark rounded-3xl p-8 mb-4 aspect-square flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                            <img alt="High-end wireless headphones"
+                                class="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal rounded-xl"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsF25meTaKEuXr4-nd-UbLj2GKLNmOd_KNRxReaA_7MbsfGTsPnnTaJsbrSgcHpGpddMkVSNfmXVyH09cIw3bOzwQRs9OV0IMw9esHsx3hb-l7kRA0C9AkBleD5xjy-buLoUEgBca9r-e8QrBHAO7b8ImogopcZVWO9oKnfCiAqZeoXtb-Ny2XBfEh33tFS36KdNWwTuzW_eA3BWAgQjs09vZ-sI1GyJpaarZ1r8nMO2dGO8mCBSshegU9nPM8ihnh-5CB8YTuQGb" />
+                        </div>
+                        <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">AKG N700NCM2
+                            Wireless Headphones</h3>
+                        <p class="text-slate-500 dark:text-slate-400 font-medium">$199.00</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div
+                            class="bg-gray-bg-light dark:bg-gray-bg-dark rounded-3xl p-8 mb-4 aspect-square flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                            <img alt="Professional modular headphones"
+                                class="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal rounded-xl"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW0e-BPxQ3FXgpw6lClQRjehRfJlVnkEvgXccTf6_bTlH40Mz0Kv4hBOfUMcarzI3PVwOqm5KLxxxFiynblUMywaYtYUFIPx5JKmwoIawxn4n4T7gnh8Bz9QPhGF4W-Niguc4MgIu2MK1x20ka3RXqE93w8Pgz_qw5Km7svJ5nSGX2z0fZIRM4lvF9plcL-Il-9UIg3f1-OKhSvMvezlCoR3MayhxxG6tE5YGEX0jEKP7Gxh2e12TsS8e_z_cD2gWl8e8g4UZW3w92" />
+                        </div>
+                        <h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">AIAIAI TMA-2
+                            Modular Headphones</h3>
+                        <p class="text-slate-500 dark:text-slate-400 font-medium">$250.00</p>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <div class="flex justify-between items-end mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <h2 class="text-2xl font-bold">Accessories</h2>
+                            <span class="text-slate-400 text-lg">19</span>
+                        </div>
+                        <a class="text-primary font-semibold hover:underline" href="#">Show all</a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="group cursor-pointer">
+                            <div
+                                class="bg-gray-bg-light dark:bg-gray-bg-dark rounded-3xl p-8 mb-4 aspect-video flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                                <img alt="Audio cable accessory"
+                                    class="w-3/4 object-contain mix-blend-multiply dark:mix-blend-normal rounded-lg"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAulw4Siyzt5o2Q-uW1jWnzqgJ_dRQ7dKzqPuxsAjG-W2iFzj6MC6-W6afyiNKepC050wR9K4lE8LoF6CQ-cHyGJ_Wc8971-ppTnrsgW4sRsiRg89d6nmbWa-WQECd_gRqml8XE-1HFuQ4Ova6fhZfrhpwG-66lARdDl8LGzea8E_Mf2JJbEa22_uqmMpLtIjHGHKAW2zmOS9rLEtFlIVN0erH112ACHQ4zkJGhzESEA0lobcRYeZ5X-ShFB2SuununXClbYdOJ4gF-" />
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">AIAIAI 3.5mm Jack 2m</h3>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <span
+                                    class="text-xs font-semibold text-emerald-500 uppercase tracking-wider">Available</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 font-medium">$25.00</p>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div
+                                class="bg-gray-bg-light dark:bg-gray-bg-dark rounded-3xl p-8 mb-4 aspect-video flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                                <img alt="Short audio cable"
+                                    class="w-3/4 object-contain mix-blend-multiply dark:mix-blend-normal rounded-lg"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIrMfx2_9A6JkQSa6q1Q3OunEBKR8Hfhm744fLmcgDBvOFmSSKefk7KbHvtomlPwYf2eu0MXnGVpAdxS33XXI-CNsLrbzYH0H91tC3uRXlE-ZWmh5cEQMkQZ4ogwDB_PZ4iFLyKlZ7TRyhieeTcD9IXKhjQf2f6oRY5nVywxWIQ59TMVKu4bpTXt840r0NHy14NckedgZDswngBjfWmNUjvl4Oq-7SdqXQHcPNnj5XPcE8N5TBdPHW4wUs2sksEL1Ga8Ur3GPRsFe8" />
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">AIAIAI 3.5mm Jack 1.5m</h3>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                                <span
+                                    class="text-xs font-semibold text-rose-500 uppercase tracking-wider">Unavailable</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 font-medium">$15.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="w-full lg:w-96">
+                <div
+                    class="sticky top-8 bg-white dark:bg-card-dark p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800">
+                    <h2 class="text-xl font-bold mb-8">My Cart</h2>
+                    <div class="flex gap-4 mb-8">
+                        <div
+                            class="w-20 h-20 bg-gray-bg-light dark:bg-gray-bg-dark rounded-2xl flex items-center justify-center p-2">
+                            <img alt="Product thumbnail"
+                                class="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHXXjcPwDkCfjuSYmZsR5tv0wkiLa0XquB2QNcc6pO_W15DpDIWn6VU94tXmc88pgmLcQI3-W1avVh-9vQhAs2GumztXib26zqBxj1feY-PEbWJghttAexmGAcqs_5Nlrl4zxKbQPRr1tvXAv61MgdVI0nLZhTwdaVF7tXhIbFQRUYhqxM3OqUpyTGr4w1pwILrHrUwNbsMqPzhAu_R_h-74dCLaa5epqLu4disW3HVfGGZ021KleZ1MG4q5bodkk9G2OTg0_8Q2tt" />
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm leading-tight mb-1">AKG N700NCM2 Wireless Headphones</h4>
+                            <p class="text-xs text-slate-400 mb-2">$199.00 (-$4.00 Tax)</p>
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="flex items-center gap-3 bg-gray-bg-light dark:bg-gray-bg-dark px-2 py-1 rounded-xl">
+                                    <button
+                                        class="w-6 h-6 flex items-center justify-center hover:bg-white dark:hover:bg-slate-700 rounded-lg transition-colors">
+                                        <span class="material-icons-outlined text-xs">remove</span>
+                                    </button>
+                                    <span class="text-sm font-bold">1</span>
+                                    <button
+                                        class="w-6 h-6 flex items-center justify-center hover:bg-white dark:hover:bg-slate-700 rounded-lg transition-colors">
+                                        <span class="material-icons-outlined text-xs">add</span>
+                                    </button>
+                                </div>
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center text-rose-400 hover:text-rose-600 transition-colors">
+                                    <span class="material-icons-outlined text-xl">delete_outline</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Delivery Location
+                            </p>
+                            <div
+                                class="flex items-center justify-between group cursor-pointer p-1 -mx-1 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 text-primary flex items-center justify-center rounded-xl">
+                                        <span class="material-icons-outlined text-xl">location_on</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm">2 Petre Melikishvili St.</p>
+                                        <p class="text-xs text-slate-400">0162, Tbilisi</p>
+                                    </div>
+                                </div>
+                                <span class="material-icons-outlined text-slate-300">chevron_right</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Payment Method
+                            </p>
+                            <div
+                                class="flex items-center justify-between group cursor-pointer p-1 -mx-1 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 bg-slate-50 dark:bg-slate-800 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                                        <img alt="Visa" class="w-6"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZaWKmFJU4Gy9ajuT2Ntp2-s7AF_byFBGVYyVnQp79FopI5thXKOBib_KPpGAQsVpb6sb3KlxiRMzAhypKHCUEXXZfu7c3zOmnN0tSduvajPeJaxhimR_CmNu3n5w0FY63DIPQEp00rpcDgDTnNNisx8OHQt9PcdiNlFBHu8xx-z5VaX4gs-nlFc7Y0fQd1kRR2INboRfxRRubaWqpG0schNfFVIU8owHdHYZPmNl1q_CYDXCOlFeyUsCKAvL0dtSsKGrMcDCFdQtp" />
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm">VISA Classic</p>
+                                        <p class="text-xs text-slate-400">****-0921</p>
+                                    </div>
+                                </div>
+                                <span class="material-icons-outlined text-slate-300">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 space-y-3 mb-8">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-400">Subtotal</span>
+                            <span class="font-bold">$199.00</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-400">Shipping Cost</span>
+                            <span class="font-bold text-primary">+$10.00</span>
+                        </div>
+                        <div class="flex justify-between text-lg pt-2">
+                            <span class="font-bold">Total</span>
+                            <span class="font-bold text-2xl tracking-tight">$209.00</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all">
+                        CHECKOUT ($209.00)
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div class="fixed bottom-6 right-6">
+        <button
+            class="w-14 h-14 bg-white dark:bg-slate-800 rounded-full shadow-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-icons-outlined text-amber-500 block dark:hidden">light_mode</span>
+            <span class="material-icons-outlined text-indigo-400 hidden dark:block">dark_mode</span>
+        </button>
+    </div>
+
+</body>
+
+</html>
