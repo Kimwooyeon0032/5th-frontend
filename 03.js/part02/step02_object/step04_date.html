@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // date
+        const today = new Date();
+        // console.log(today.getFullYear());
+
+
+        // now : 밀리초(1970.01.01 ~)
+        // console.log(Date.now());
+
+        const todayDate = new Date(2026, 2, 23);
+        // console.log(Date.parse('2026-02-23'));
+        // console.log(new Date(Date.parse('2026-02-23')));
+
+        // 포맷팅
+        console.log(today.toLocaleDateString('ko-KR'));
+        console.log(today.toLocaleTimeString('ko-KR'));
+
+        console.log(today.toLocaleString('ko-KR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekend: 'long',
+            hour: '2-digit',
+            minute: '2-digit'
+        }));
+
+    </script>
+</body>
+</html>
