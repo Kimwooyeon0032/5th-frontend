@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            // JSON.parse("일반 문자열");
+            throw new Error('Custom error msg');
+        } catch (error) {
+            // console.log(error.name);
+            // console.log(error.message);
+            // console.log(error.stack);
+            console.error(error);
+        } finally {
+            console.log('finally block');
+        }
+
+
+        // TypeError, RangeError
+        function vaildatekAge(age) {
+
+            const numAge = Number(age);
+
+            if(Number.isNaN(numAge)) {
+                throw new TypeError('나이는 숫자여야만 함');
+            }
+
+            if(numAge < 0 || numAge > 120) {
+                throw new RangeError('나이는 0 - 120 사이 값이어야 함');
+            }
+
+            return numAge;
+
+        }
+
+        // console.log(vaildatekAge('abc'));
+        // console.log(vaildatekAge(123));
+        console.log(vaildatekAge(25));
+
+        // 커스텀 에러
+        class NotFoundError extends Error {
+            constructor(message) {
+                this.name = 'NotFoundError';
+                this.statusCode = 404;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
