@@ -5,10 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
+    <div id="user-container"></div>
+
+
     <script>
+        const BASE_URL = 'https://jsonplaceholder.typicode.com/users';
+        // 실제 활용
+        async function loadUsers() {
+            try {
+                const response = await fetch(BASE_URL);
+                if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                const data = await response.json();
+
+                const userContainer = document.getElementById('user-container');
+                // name, email
+                userContainer.innerHTML = '';
+
+                data.forEach(user => { 
+                    const article = document.createElement('article');
+                    article.className = 'user'
+                    article.innerHTML = `
+                        <h2>${user.name}</h2>
+                        <p>${user.email}</p>
+                    `;
+                    userContainer.appendChild(article);
+                });
+            } catch (error) {
+
+            }
+        }
+        loadUsers();
+
+
+
+
         // XMLHttpRequest 객체
         function xhrAjax() {
 
@@ -31,18 +66,102 @@
 
         // fetch
         function fetchAjax() {
-            
-            // GET
-            fetch("https://jsonplaceholder.typicode.com/users")
-                .then(response => response.json())
-                .then(users => console.log(users))
-                .catch(error => console.log(error));
+
+            // GET (가져오기)
+            // fetch(`${BASE_URL}`)
+            //     .then(response => response.json())
+            //     .then(users => console.log(users))
+            //     .catch(error => console.log(error));
+
+            // POST (추가)
+            // fetch(BASE_URL, {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({
+            //         "name": "JavaScript",
+            //         "username": "fetch",
+            //         "email": "post@fetch.com"
+            //     })
+            // }).then(response => response.json())
+            // .then(users => console.log(users))
+
+            // PUT, PATCH (수정)
+            // fetch(`${BASE_URL}/1`, {
+            //     method: 'PUT',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({
+            //         "username": "fetch"
+            //     })
+            // }).then(response => response.json())
+            // .then(user => console.log(user))
+
+            // DELETE
+            fetch(`${BASE_URL}/1`, {
+                method: 'DELETE',
+            }).then(response => response.json())
+                .then(user => console.log(user))
+
         }
-        fetchAjax();
+        // fetchAjax();
+
+        // axios
+        function axiosAjax() {
+            // GET
+            // axios.get(`${BASE_URL}/10`)
+            //     .then(reponse => console.log(reponse.data))
+
+            // POST
+            const newUser = {
+                "name": "JavaScript",
+                "username": "fetch",
+                "email": "post@fetch.com"
+            }
+            // axios.post(BASE_URL, newUser)
+            //     .then(response => response.data)
+            //     .then(user => console.log(user))
+
+            // PUT, PATCH
+            const updateInfo = {
+                "username": "fetch"
+            }
+            // axios.put(`${BASE_URL}/1`, updateInfo)
+            //     .then(response => response.data)
+            //     .then(user => console.log(user))
+            // axios.patch(`${BASE_URL}/1`, updateInfo)
+            //     .then(response => response.data)
+            //     .then(user => console.log(user))
+
+            // DELETE
+            axios.delete(`${BASE_URL}/1`, updateInfo)
+                .then(response => response.data)
+                .then(user => console.log(user))
+        }
+        // axiosAjax();
 
 
+        // 각 기능들 함수화
+        // GET: 데이터 가져오기
+        async function fetchGetUsers() {
+            try {
+                const response = await fetch(BASE_URL);
+                if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                throw error;
+            }
+        }
 
-
+        async function fetchGetUsers(id) {
+            try {
+                const response = await fetch(`${BASE_URL}/${id}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                throw error;
+            }
+        }
 
 
 
